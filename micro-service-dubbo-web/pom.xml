@@ -14,6 +14,11 @@
             <artifactId>micro-service-dubbo-interface</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.whforever</groupId>
+            <artifactId>micro-service-dubbo-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <parent>

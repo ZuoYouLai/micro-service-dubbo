@@ -7,7 +7,7 @@
 		http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
 	<!-- 加载配置属性文件 -->
-	<context:property-placeholder ignore-unresolvable="true" location="classpath:config/*.properties" />
+	<context:property-placeholder ignore-unresolvable="true" location="classpath:config/config.properties" />
 
     <context:component-scan base-package="com.whforever" />
     <context:annotation-config></context:annotation-config>
@@ -18,11 +18,7 @@
 	</bean> -->
 
 	<!--import spring config-->
-	 <import resource="classpath:config/mybatis.xml" />
-	<import resource="classpath:config/spring-context-mvc.xml" />
-	<import resource="classpath:config/quark-share-beans-context.xml" />
-	<import resource="classpath:config/spring-context-jedis.xml" />
-
-
-
+	<import resource="classpath:spring/mybatis.xml" />
+	<import resource="classpath:spring/spring-context-mvc.xml" />
+	<import resource="classpath:spring/spring-context-jedis.xml" />
 </beans>
