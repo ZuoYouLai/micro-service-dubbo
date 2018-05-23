@@ -10,11 +10,12 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>micro-service-dubbo-service</module>
+        <module>micro-service-dubbo-provider</module>
         <module>micro-service-dubbo-dal</module>
         <module>micro-service-dubbo-web</module>
         <module>micro-service-dubbo-model</module>
         <module>micro-service-dubbo-common</module>
+        <module>micro-service-dubbo-interface</module>
     </modules>
 
     <properties>
@@ -39,6 +40,9 @@
         <dozer.version>5.5.1</dozer.version>
         <shiro.version>1.2.3</shiro.version>
         <guava.version>17.0</guava.version>
+        <zkclient_version>0.2</zkclient_version>
+        <curator_version>2.12.0</curator_version>
+        <zookeeper_version>3.4.9</zookeeper_version>
     </properties>
 
     <dependencyManagement>
@@ -93,6 +97,24 @@
                     <groupId>commons-logging</groupId>
                 </exclusion>
             </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>com.101tec</groupId>
+            <artifactId>zkclient</artifactId>
+            <version>${zkclient_version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>${zookeeper_version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-framework</artifactId>
+            <version>${curator_version}</version>
         </dependency>
 
         <!--redis-->

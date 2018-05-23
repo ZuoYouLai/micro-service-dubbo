@@ -1,10 +1,13 @@
-package com.whforever.service.provider.impl;
+package com.whforever.service.impl;
 
-import com.whforever.model.User;
-import com.whforever.service.provider.DemoService;
+import com.alibaba.dubbo.rpc.RpcContext;
+import com.whforever.service.DemoService;
+import com.whforever.service.User;
 import org.springframework.stereotype.Service;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Service("demoService")
@@ -12,7 +15,9 @@ public class DemoServiceImpl implements DemoService {
 
     @Override
     public String sayHello(String name) {
-        return "Hello " + name;
+        System.out.println("[" + new SimpleDateFormat("HH:mm:ss").format(new Date()) + "] Hello " + name + ", request from consumer: " + RpcContext
+                .getContext().getRemoteAddress());
+        return "Hello " + name + ", response from provider: " + RpcContext.getContext().getLocalAddress();
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.whforever.service.provider;
+package com.whforever.service;
 
 import java.util.List;
 

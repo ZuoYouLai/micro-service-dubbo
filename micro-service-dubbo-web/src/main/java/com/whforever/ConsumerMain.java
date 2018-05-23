@@ -1,7 +1,7 @@
 package com.whforever;
 
-import com.whforever.model.User;
-import com.whforever.service.provider.DemoService;
+import com.whforever.service.DemoService;
+import com.whforever.service.User;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.List;
@@ -15,6 +15,10 @@ public class ConsumerMain {
         context.start();
         DemoService demoService = (DemoService) context.getBean("demoService"); // get remote service proxy
 
+        List<User> userList = demoService.getUsers();
+        for (User user : userList) {
+            System.out.println(user.toString());
+        }
 
         while (true) {
             try {
@@ -22,11 +26,6 @@ public class ConsumerMain {
 
                 String hello = demoService.sayHello("world"); // call remote method
                 System.out.println(hello); // get result
-
-                List<User> userList = demoService.getUsers();
-                for (User user : userList) {
-                    System.out.println(user.toString());
-                }
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
             }

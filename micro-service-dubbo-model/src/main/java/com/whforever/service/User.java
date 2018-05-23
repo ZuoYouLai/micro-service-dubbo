@@ -1,6 +1,12 @@
-package com.whforever.model;
+package com.whforever.service;
 
-public class User {
+import java.io.Serializable;
+
+/**
+ * @author user
+ */
+public class User implements Serializable {
+
     private String name;
 
     private int age;
