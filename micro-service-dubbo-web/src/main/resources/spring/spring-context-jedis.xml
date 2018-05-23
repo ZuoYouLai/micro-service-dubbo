@@ -12,7 +12,7 @@
 	<description>Jedis Configuration</description>
 
     <!-- 加载配置属性文件 -->
-	<util:properties id="oneshareConfig" location="classpath:config/config.properties"></util:properties>
+	<util:properties id="msConfig" location="classpath:config/config.properties"></util:properties>
 
 	<!--cache client,expire after 20 hours-->
 	<!-- 连接池配置 -->
