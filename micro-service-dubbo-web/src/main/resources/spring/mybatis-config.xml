@@ -47,14 +47,14 @@
 		<!--<typeAlias alias="Page" type="com.quarkdata.quark.share.util.common.persistence.Page" />&lt;!&ndash;分页  &ndash;&gt;-->
 	<!--</typeAliases>-->
 	
-	<typeHandlers>
-	    <typeHandler handler="com.quarkdata.quark.share.util.common.mapper.ConvertBlobTypeHandler"
-	        javaType="java.lang.String" jdbcType="BLOB"/>
-	</typeHandlers>
-	
-	<!-- 插件配置 -->
-	<plugins>
-		<plugin interceptor="com.quarkdata.quark.share.util.common.persistence.interceptor.PaginationInterceptor" />
-    </plugins>
+	<!--<typeHandlers>-->
+	    <!--<typeHandler handler="com.quarkdata.quark.share.util.common.mapper.ConvertBlobTypeHandler"-->
+	        <!--javaType="java.lang.String" jdbcType="BLOB"/>-->
+	<!--</typeHandlers>-->
+	<!---->
+	<!--&lt;!&ndash; 插件配置 &ndash;&gt;-->
+	<!--<plugins>-->
+		<!--<plugin interceptor="com.quarkdata.quark.share.util.common.persistence.interceptor.PaginationInterceptor" />-->
+    <!--</plugins>-->
 	
 </configuration>
