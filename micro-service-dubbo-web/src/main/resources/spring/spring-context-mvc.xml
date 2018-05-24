@@ -15,7 +15,7 @@
     <!-- 加载配置属性文件 -->
 	<context:property-placeholder ignore-unresolvable="true" location="classpath:config/config.properties" />
 	<!-- 使用Annotation自动注册Bean,只扫描@Controller -->
-	<context:component-scan base-package="com.whforever" use-default-filters="false"><!-- base-package 如果多个，用“,”分隔 -->
+	<context:component-scan base-package="com.whforever.web.controller" use-default-filters="false"><!-- base-package 如果多个，用“,”分隔 -->
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 	</context:component-scan>
 
@@ -33,7 +33,7 @@
                 </property>
                 <property name="prettyPrint" value="false"/>
                 <property name="objectMapper">
-                    <bean class="com.whforever.micro.common.common.util.mapper.JsonMapper"></bean>
+                    <bean class="com.whforever.common.util.mapper.JsonMapper"></bean>
                 </property>
             </bean>
             <!-- 使用XML格式输出数据 -->
@@ -53,10 +53,10 @@
 	</bean>
 	
 	<!-- 定义视图文件解析 -->
-	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="${web.view.prefix}"/>
-		<property name="suffix" value="${web.view.suffix}"/>
-	</bean>
+	<!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+		<!--<property name="prefix" value="${web.view.prefix}"/>-->
+		<!--<property name="suffix" value="${web.view.suffix}"/>-->
+	<!--</bean>-->
 	
 	<!-- 对静态资源文件的访问， 将无法mapping到Controller的path交给default servlet handler处理 -->
 	<mvc:default-servlet-handler />

@@ -31,6 +31,6 @@
 
     <!-- generate proxy for the remote service, then demoService can be used in the same way as the
     local regular interface -->
-    <dubbo:reference id="demoService" check="false" interface="com.whforever.service.DemoService"/>
+    <dubbo:reference id="demoConsumerService" check="false" interface="com.whforever.service.DemoService"/>
 
 </beans>

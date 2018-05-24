@@ -19,7 +19,7 @@
     <!-- 扫描basePackage下的接口 -->
     <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
-        <property name="basePackage" value="com.quarkdata.quark.share.dal.dao"/>
+        <property name="basePackage" value="com.whforever.dal"/>
     </bean>
     
     <!-- 定义事务 -->

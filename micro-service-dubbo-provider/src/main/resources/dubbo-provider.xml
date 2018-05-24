@@ -32,9 +32,9 @@
     <dubbo:protocol name="dubbo" port="20880"/>
 
     <!-- service implementation, as same as regular local bean -->
-    <bean id="demoService" class="com.whforever.service.impl.DemoServiceImpl"/>
+    <bean id="demoProviderService" class="com.whforever.service.impl.DemoServiceImpl"/>
 
     <!-- declare the service interface to be exported -->
-    <dubbo:service interface="com.whforever.service.DemoService" ref="demoService"/>
+    <dubbo:service interface="com.whforever.service.DemoService" ref="demoProviderService"/>
 
 </beans>

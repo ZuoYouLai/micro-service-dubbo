@@ -2,7 +2,7 @@ package com.whforever.service.impl;
 
 import com.alibaba.dubbo.rpc.RpcContext;
 import com.whforever.service.DemoService;
-import com.whforever.service.User;
+import com.whforever.model.User;
 import org.springframework.stereotype.Service;
 
 import java.text.SimpleDateFormat;
