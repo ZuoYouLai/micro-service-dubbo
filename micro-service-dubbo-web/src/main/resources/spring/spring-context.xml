@@ -18,7 +18,7 @@
 	</bean> -->
 
 	<!--import spring config-->
-	<import resource="classpath:spring/spring-context-mybatis.xml" />
+	<!--<import resource="classpath:spring/spring-context-mybatis.xml" />-->
 	<import resource="classpath:spring/spring-context-mvc.xml" />
     <import resource="classpath:dubbo/dubbo-consumer.xml" />
 	<!--<import resource="classpath:spring/spring-context-jedis.xml" />-->
